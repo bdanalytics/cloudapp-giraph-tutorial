@@ -69,7 +69,7 @@ case "$1" in
 		;;
 esac
 
-mkdir otput/$1
+mkdir -p -v otput/$1
 hadoop fs -cat /giraph-tutorial/output/$1/* > otput/$1/part-m-00000
 #hadoop fs -get /giraph-tutorial/output/connected-components/* otput
 more otput/$1/part-m-00000
